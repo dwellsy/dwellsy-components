@@ -2,6 +2,7 @@
 module.exports = {
   darkMode: "media",
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  /*
   theme: {
     colors: {
       white: "#ffffff",
@@ -19,6 +20,7 @@ module.exports = {
     },
     extend: {},
   },
+  */
   plugins: [require("tailwindcss-dark-mode")()],
   variants: ["dark", "dark-hover", "dark-group-hover", "dark-even", "dark-odd"],
 };
