@@ -2,6 +2,15 @@
 module.exports = {
   darkMode: "media",
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      colors: {
+        purple: "#7172e8",
+        "purple-dark": "#5654bf",
+        "gray-light": "#eaeaea",
+      },
+    },
+  },
   /*
   theme: {
     colors: {
@@ -18,7 +27,6 @@ module.exports = {
       // 'gray-light': '#d3dce6',
       "gray-light": "#eaeaea",
     },
-    extend: {},
   },
   */
   plugins: [require("tailwindcss-dark-mode")()],
