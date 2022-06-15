@@ -6,11 +6,11 @@ function App() {
   return (
     <div className="text-center">
       <div className="py-3 pt-8">
-        <Button primary label="Primary" />
+        <Button type="primary" label="Primary" />
       </div>
 
       <div className="py-1">
-        <Button secondary label="Secondary" />
+        <Button type="secondary" label="Secondary" />
       </div>
 
       <div className="py-1">
