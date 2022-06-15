@@ -4,7 +4,7 @@ import "../../App.css";
 type ButtonProps = {
   label: String,
   type?: "primary" | "secondary" | "", 
-  size?: "sm" | "base" | "lg" | "xl" | "2xl" | "4xl"
+  size?: "sm" | "base" | "lg" | "xl",
 }
 
 export const Button: FunctionComponent<ButtonProps> = (props) => {
