@@ -4,50 +4,34 @@ import "../../App.css";
 type ButtonProps = {
   label: String,
   type?: "primary" | "secondary" | "", 
-  size?: "sm" | "md" | "lg"
+  size?: "sm" | "base" | "lg" | "xl" | "2xl" | "4xl"
 }
 
 export const Button: FunctionComponent<ButtonProps> = (props) => {
   let type_classes = null;
   let hover_classes = null;
-  let base_classes = "px-10 py-3 text-sm font-semibold";
-  let normal_classes = "text-black font-semibold";
+  let base_classes = "px-10 py-3 text-base font-semibold";
+  let common_classes = "text-black font-semibold";
+
+  const size = props.size === null ? "base" : props.size;
+  base_classes = `px-10 py-3 text-${size} font-semibold`;
 
   switch(props.type) {
     case "primary":
-      type_classes = "text-white rounded-full bg-purple border-purple bg-purple";
+      type_classes = `text-${size} text-white rounded-full bg-purple border-purple bg-purple`;
       hover_classes = "hover:text-white hover:bg-purple-dark hover:border-purple-dark";
       break;
     case "secondary":
-      type_classes = "px-10 py-3 text-sm text-purple font-semibold";
+      type_classes = `px-10 py-3 text-${size} text-purple font-semibold`;
       hover_classes = "hover:bg-gray-light";
       break;
     default:
       break;
   }
         
-  switch(props.size) {
-    case "sm":
-      base_classes = "px-10 py-3 text-sm font-semibold";
-      break;
-
-    case "md":
-      base_classes = "px-10 py-3 text-md font-semibold";
-      break;
-    
-    case "lg":
-      base_classes = "px-10 py-3 text-lg font-semibold";
-      break;
-
-    default:
-      base_classes = "px-10 py-3 text-md font-semibold";
-      break;
-  }
-        
-
   return (
     <button 
-      className={`${normal_classes} ${base_classes} ${type_classes} ${hover_classes}
+      className={`${common_classes} ${base_classes} ${type_classes} ${hover_classes}
     `}>{ props.label }</button>
   );
 }
