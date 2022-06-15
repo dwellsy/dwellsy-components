@@ -3,7 +3,7 @@ import "../../App.css";
 
 type ButtonProps = {
   label: String,
-  type?: "primary" | "secondary",
+  type?: "primary" | "secondary" | "", 
   size?: "sm" | "md" | "lg"
 }
 
@@ -26,14 +26,24 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
       break;
   }
         
-  if(props.size === "sm") 
-    base_classes = "px-10 py-3 text-sm font-semibold";
+  switch(props.size) {
+    case "sm":
+      base_classes = "px-10 py-3 text-sm font-semibold";
+      break;
 
-  if(props.size === "md") 
-    base_classes = "px-10 py-3 text-md font-semibold";
+    case "md":
+      base_classes = "px-10 py-3 text-md font-semibold";
+      break;
+    
+    case "lg":
+      base_classes = "px-10 py-3 text-lg font-semibold";
+      break;
 
-  if(props.size === "lg")
-    base_classes = "px-10 py-3 text-lg font-semibold";
+    default:
+      base_classes = "px-10 py-3 text-md font-semibold";
+      break;
+  }
+        
 
   return (
     <button 
