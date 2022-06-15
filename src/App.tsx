@@ -1,27 +1,22 @@
 /* src/App.jsx */
-import React from "react";
 import "./App.css";
+import { Button }from "./components/buttons";
 
 function App() {
   return (
     <div className="text-center">
-      <div className="py-3">
-        <button 
-          className="px-10 py-3 text-sm text-white font-semibold rounded-full 
-            border border-purple bg-purple
-            hover:text-white hover:bg-purple-dark hover:border-purple-dark
-        ">Primary</button>
+      <div className="py-3 pt-8">
+        <Button primary label="Primary" />
       </div>
+
       <div className="py-1">
-        <button 
-          className="px-10 py-3 text-sm text-purple font-semibold rounded-full 
-        ">Secondary</button>
+        <Button secondary label="Secondary" />
       </div>
+
       <div className="py-1">
-        <button 
-          className="px-10 py-3 text-sm text-black font-semibold rounded-full 
-        ">Secondary</button>
+        <Button label="Normal" />
       </div>
+
     </div>
   );
 }
