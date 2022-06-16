@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import "../../App.css";
 
 type ButtonProps = {
   label: String,
