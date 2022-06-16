@@ -11,7 +11,7 @@ export const Button: FunctionComponent<ButtonProps> = (props) => {
   let type_classes = null;
   let hover_classes = null;
   let base_classes = "px-10 py-3 text-base font-semibold";
-  let common_classes = "text-black font-semibold";
+  let common_classes = "font-semibold";
 
   const size = props.size === null ? "base" : props.size;
   base_classes = `px-10 py-3 text-${size} font-semibold dark:text-white`;
