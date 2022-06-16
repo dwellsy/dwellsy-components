@@ -1,11 +1,14 @@
 /* src/App.jsx */
 import "./App.css";
-import { Button } from "./components/buttons";
-import PropertyDummy from "./components/dummy/PropertyDummy";
+import { Header } from "./templates/Header";
+import HomeTemplate from "./templates/HomeTemplate";
 
 function App() {
   return (
-    <PropertyDummy />
+    <>
+      <Header />
+      <HomeTemplate />
+    </>
   );
 }
 
