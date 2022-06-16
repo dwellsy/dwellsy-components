@@ -1,5 +1,4 @@
-/* src/App.jsx */
-import { Children, FunctionComponent, PropsWithChildren } from "react";
+import { FunctionComponent } from "react";
 import "../../App.css";
 
 type ParagraphProps = {
