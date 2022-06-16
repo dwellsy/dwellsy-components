@@ -25,6 +25,7 @@ export const Header = () => {
             <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-slate-900 dark:text-slate-100 hover:text-red dark:hover:text-slate-300">
               Blog
             </a>
+            <input type="search" placeholder="Search" className="mx-4 p-3 focus:float-left focus:absolute focus:left-2 focus:right-2 focus:top-4" />
           </div>
           <div className="">
             <a href="#" 
