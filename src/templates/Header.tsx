@@ -16,26 +16,21 @@ export const Header = () => {
         </div>
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block">
           <div className="text-sm lg:flex-grow">
-            <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-slate-900 dark:text-slate-100 hover:text-red mr-4 dark:hover:text-slate-300">
-              Docs
-            </a>
-            <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-slate-900 dark:text-slate-100 hover:text-red mr-4 dark:hover:text-slate-300">
-              Examples
-            </a>
-            <a href="#responsive-header" className="block mt-4 lg:inline-block lg:mt-0 text-slate-900 dark:text-slate-100 hover:text-red dark:hover:text-slate-300">
-              Blog
-            </a>
-            <label className="relative text-gray-400 focus-within:text-gray-600 ">
-              <svg className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3 pl-3" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="30px" height="30px" viewBox="0 0 30 30">
-              <path d="M28,26.6l-8.265-8.264C21.15,16.61,22,14.405,22,12c0-5.523-4.478-10-10-10S2,6.477,2,12c0,5.523,4.478,10,10,10
-                c2.404,0,4.61-0.85,6.336-2.265L26.6,28L28,26.6z M12,20c-4.418,0-8-3.582-8-8c0-4.418,3.582-8,8-8s8,3.582,8,8
-                C20,16.418,16.418,20,12,20z"/>
+            <label className="relative text-gray-400 focus-within:text-gray-600 w-full">
+              <svg 
+                className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3 pl-3" 
+                viewBox="0 0 18 18" 
+                width="24" 
+                height="24"
+              >
+                <path 
+                  d="M7.4 2.5c-2.7 0-4.9 2.2-4.9 4.9s2.2 4.9 4.9 4.9c1 0 1.8-.2 2.5-.8l3.7 3.7c.2.2.4.3.8.3.7 0 1.1-.4 1.1-1.1 0-.3-.1-.5-.3-.8L11.4 10c.4-.8.8-1.6.8-2.5.1-2.8-2.1-5-4.8-5zm0 1.6c1.8 0 3.2 1.4 3.2 3.2s-1.4 3.2-3.2 3.2-3.3-1.3-3.3-3.1 1.4-3.3 3.3-3.3z">
+                </path>
               </svg>
               <input 
                 type="search" 
-                placeholder="Search" 
-                className="pl-9 mx-4 p-3 bg-gray-100 dark:bg-gray-300 focus:top-4 border-2 border-slate-300 rounded-sm" 
+                placeholder="Enter a city, neighborhood, workplace, school, or even a coffee shop"
+                className="pl-9 mx-4 p-3 bg-white dark:bg-gray-300 border border-[#bdbae2] rounded-md black" 
               />
             </label>
           </div>
