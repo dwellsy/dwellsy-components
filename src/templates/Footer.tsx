@@ -7,11 +7,11 @@ export const Footer = () => {
   return (
     <>
       <div className="bg-white dark:bg-slate-900 items-center">
-        <div className="bg-white dark:bg-slate-900 item-center max-w-8xl mx-auto pt-10 ">
+        <div className="bg-white dark:bg-slate-900 item-center max-w-screen-2xl mx-auto pt-10 ">
           <img src={Logo} alt="Dwellsy" className="max-h-28" loading="lazy" />
         </div>
         <div className="bg-white dark:bg-slate-900 items-center pb-24">
-          <div className="flex overflow-hidden bg-white dark:bg-slate-900 min-h-min item-center justify-between max-w-8xl mx-auto">
+          <div className="flex overflow-hidden bg-white dark:bg-slate-900 min-h-min item-center justify-between max-w-screen-2xl mx-auto">
             <div className="px-1 w-1/4 overflow-hidden text-white mx-1 flex">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.63 11.55" className="h-7 m-x-1 mx-3">
                   <title>icon-brand-fb</title>

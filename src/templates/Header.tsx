@@ -6,7 +6,7 @@ import Logo from "../components/logo";
 export const Header = () => {
   return (
     <div className="bg-white dark:bg-slate-900 min-h-max">
-      <nav className="flex items-center justify-between flex-wrap bg-white dark:bg-slate-900 p-6 max-w-8xl mx-auto">
+      <nav className="flex items-center justify-between flex-wrap bg-white dark:bg-slate-900 p-6 max-w-screen-2xl mx-auto">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <Logo />
           <span className="font-semibold text-xl text-black dark:text-white tracking-tight">Tailwind CSS Demo</span>
