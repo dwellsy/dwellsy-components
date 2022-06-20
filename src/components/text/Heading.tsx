@@ -14,7 +14,7 @@ export const Heading: FunctionComponent<HeadingProps> = ({ level, size, children
   const size_class = size === null ? "md:text-2xl text-2xl" : `md:text-${size} text-${size}`;
 
   return (
-    <CustomHeading className={`${base_classes} ${size_class}`}>{ children }</CustomHeading>
+    <CustomHeading className={`font-sans ${base_classes} ${size_class}`}>{ children }</CustomHeading>
   );
 }
 

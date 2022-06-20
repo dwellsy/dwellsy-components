@@ -11,7 +11,7 @@ export const Paragraph: FunctionComponent<ParagraphProps> = ({ size, children })
   const size_class = size === null ? "text-sm" : `text-${size}`;
 
   return (
-    <p className={`${base} ${size_class}`}>
+    <p className={`font-sans ${base} ${size_class}`}>
       { children }
     </p>
   );
