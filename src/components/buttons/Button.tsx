@@ -60,7 +60,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
 
   return (
     <button 
-      onClick={onClick}
+      onClick={disabled !== true ? onClick : () => {}}
       { ...disabled === true && "disabled" }
       className={`${errorClasses} ${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
     `}>{ !loading ? children : "- Loading -"}</button>
