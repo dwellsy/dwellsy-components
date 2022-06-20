@@ -8,6 +8,8 @@ module.exports = {
         sans: ["Gotham", "sans-serif"],
       },
       colors: {
+        // Took our base 'purple' and set it as the primary here to get 100-900 colors
+        // https://materialpalettes.com/
         purple: "#7172e8",
         "purple-50": "#ebecfc",
         "purple-100": "#cdcef7",
