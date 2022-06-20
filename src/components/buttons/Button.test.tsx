@@ -16,6 +16,28 @@ describe("Button test", () => {
     expect(button.className).toContain("text-white");
   });
 
+  test("Should have secondary styles", () => {
+    render(<Button type="secondary" size="sm">Button</Button>)
+    const button = screen.getByText("Button");
+    expect(button.className).toContain("text-purple");
+    expect(button.className).toContain("dark:text-purple");
+    expect(button.className).toContain("hover:bg-gray-light");
+  });
+
+  test("Should look errory when error is true", () => {
+    render(<Button size="sm" error>Button</Button>)
+    const button = screen.getByText("Button");
+    expect(button.className).toContain("bg-red-600");
+    expect(button.className).toContain("text-white");
+  });
+
+  test("Should have base styles when type is omitted", () => {
+    render(<Button size="sm">Button</Button>)
+    const button = screen.getByText("Button");
+    expect(button.className).toContain("text-black");
+    expect(button.className).toContain("dark:text-white");
+  });
+
   test("should execute function onClick", () => {
     const onClickResult = vi.fn(() => 20);
     render(<Button onClick={onClickResult} type='primary' size="sm">Help</Button>);
