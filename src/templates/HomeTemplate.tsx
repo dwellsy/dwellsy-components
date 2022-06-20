@@ -8,6 +8,10 @@ import House1 from '../assets/images/house1.jpg';
 import House2 from '../assets/images/house2.jpg';
 import House3 from '../assets/images/house3.jpg';
 import React from "react";
+import { SearchIcon } from "../components/icons/Search";
+import SignOutIcon from "../components/icons/SignOut";
+import ProfileIcon from "../components/icons/Profile";
+import FavoriteIcon from "../components/icons/Favorite";
 
 const handleClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
   alert("Clicked");
@@ -19,7 +23,7 @@ export const HomeTemplate = () => {
       <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
         <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
           <Heading level="h3" size="md">Beach House in Collingwood</Heading>
-          <Subheading>Entire House</Subheading>
+          <Subheading><FavoriteIcon />Entire House</Subheading>
         </div>
         <div className="grid gap-2 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-2 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
           <img src={House1} alt="" className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" />
