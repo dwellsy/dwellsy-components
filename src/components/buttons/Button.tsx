@@ -31,8 +31,8 @@ export const Button: FunctionComponent<ButtonProps> = ({
 
   switch(type) {
     case "primary":
-      typeClasses = `text-${size} text-white rounded-full bg-purple border-purple bg-purple`;
-      hoverClasses = "hover:text-white hover:bg-purple-dark hover:border-purple-dark";
+      typeClasses = `text-${size} text-white rounded-full bg-purple`;
+      hoverClasses = "hover:text-white hover:bg-purple-800";
       break;
     case "secondary":
       typeClasses = `px-10 py-3 text-${size} text-purple dark:text-purple font-semibold`;
