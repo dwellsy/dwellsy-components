@@ -45,7 +45,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
   }
 
   if(error) {
-    errorClasses = "bg-red-600 scale-110 shake active:bg-red-600";
+    errorClasses = "bg-red-600 active:bg-red-600";
     hoverClasses = "hover:bg-red-900";
   }
 
@@ -61,7 +61,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
   return (
     <button 
       onClick={disabled !== true ? onClick : () => {}}
-      { ...disabled === true && disabled }
+      disabled={disabled}
       className={`${errorClasses} ${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
     `}>{ !loading ? children : "- Loading -"}</button>
   );
