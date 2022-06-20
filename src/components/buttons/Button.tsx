@@ -3,12 +3,12 @@ import "../../App.css";
 
 type ButtonProps = {
   children?: React.ReactNode,
-  type?: "primary" | "secondary" | "", 
-  size?: "sm" | "base" | "lg" | "xl",
+  type?: "primary" | "secondary" | null 
+  size?: "sm" | "base" | "lg" | "xl" | null,
   error?: boolean,
   loading?: boolean,
   disabled?: boolean,
-  onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 
 export const Button: FunctionComponent<ButtonProps> = ({
@@ -61,7 +61,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
   return (
     <button 
       onClick={disabled !== true ? onClick : () => {}}
-      { ...disabled === true && "disabled" }
+      { ...disabled === true && disabled }
       className={`${errorClasses} ${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
     `}>{ !loading ? children : "- Loading -"}</button>
   );
