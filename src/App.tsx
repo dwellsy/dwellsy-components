@@ -1,5 +1,6 @@
 /* src/App.jsx */
 import "./App.css";
+import { Cards } from "./templates/Cards/Cards";
 import Footer from "./templates/Footer/Footer";
 import { Header } from "./templates/Header";
 import { Hero } from "./templates/Hero/Hero";
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Cards />
       <HomeTemplate />
       <Footer />
     </>
