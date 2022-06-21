@@ -4,6 +4,9 @@ module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontSize: {
+        xl: ["3.0rem", { lineHeight: "1" }],
+      },
       fontFamily: {
         sans: ["Gotham", "sans-serif"],
       },
