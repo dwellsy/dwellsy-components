@@ -8,7 +8,7 @@ type HeadingProps = {
 
 
 export const Heading: FunctionComponent<HeadingProps> = ({ level, size, children }) => {
-  const headingLevel = level === null ? "h3" : level; 
+  const headingLevel = level ? level : "h3"; 
   const CustomHeading = `${headingLevel}` as keyof JSX.IntrinsicElements;
   const base_classes = "mt-1 font-semibold text-white sm:text-slate-900 dark:sm:text-white";
   const size_class = size === null ? "md:text-2xl text-2xl" : `md:text-${size} text-${size}`;

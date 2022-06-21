@@ -20,11 +20,11 @@ export const Button: FunctionComponent<ButtonProps> = ({
   disabled = false,
   onClick = () => {},
 }) => {
-  let typeClasses = null;
-  let hoverClasses = null;
+  let typeClasses = "";
+  let hoverClasses = "";
   let baseClasses = "px-10 py-3 text-base inline-flex items-center justify-between";
-  let errorClasses;
-  let disabledClasses;
+  let errorClasses = "";
+  let disabledClasses = "";
 
   const actualSize = size === null ? "base" : size;
   baseClasses = `inline-flex px-10 py-3 text-${size} font-semibold dark:text-white items-center`;
@@ -62,7 +62,7 @@ export const Button: FunctionComponent<ButtonProps> = ({
     <button 
       onClick={disabled !== true ? onClick : () => {}}
       disabled={disabled}
-      className={`${errorClasses} ${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
+      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
     `}>{ !loading ? children : "- Loading -"}</button>
   );
 }
