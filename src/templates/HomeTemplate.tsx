@@ -18,7 +18,8 @@ export const HomeTemplate = () => {
     <main className="py-6 px-4 sm:p-6 md:py-10 md:px-8 dark:bg-slate-800">
       <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-5xl lg:gap-x-20 lg:grid-cols-2">
         <div className="relative p-3 col-start-1 row-start-1 flex flex-col-reverse rounded-lg bg-gradient-to-t from-black/75 via-black/0 sm:bg-none sm:row-start-2 sm:p-0 lg:row-start-1">
-          <Heading level="h1" size="md">Beach House in Collingwood</Heading>
+          <Heading level="h3" size="md">Beach House in Collingwood</Heading>
+          <Subheading>Entire House</Subheading>
         </div>
         <div className="grid gap-2 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-2 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0">
           <img src={House1} alt="" className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full" />

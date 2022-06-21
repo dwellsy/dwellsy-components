@@ -3,7 +3,7 @@ import "../../App.css";
 
 type ButtonProps = {
   children?: React.ReactNode,
-  type?: "primary" | "secondary" | null 
+  type?: "primary" | "secondary" | "outline" | null 
   size?: "sm" | "base" | "lg" | "xl" | null,
   error?: boolean,
   loading?: boolean,
@@ -37,6 +37,10 @@ export const Button: FunctionComponent<ButtonProps> = ({
     case "secondary":
       typeClasses = `px-10 py-3 text-${size} text-purple dark:text-purple font-semibold`;
       hoverClasses = "hover:bg-gray-light";
+      break;
+    case "outline":
+      typeClasses = "inline-block text-sm px-4 py-2 leading-none border rounded text-black dark:text-white border-slate-900 dark:border-white hover:border-black hover:text-slate-900 hover:bg-gray-200 mt-4 lg:mt-0 ";
+      hoverClasses = "hover:border hover:border-slate-500 hover:bg-slate-100";
       break;
     default:
       typeClasses = "text-black dark:text-white";

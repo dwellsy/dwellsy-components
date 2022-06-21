@@ -1,9 +1,11 @@
 /* src/App.jsx */
 import "../App.css";
+import { Button } from "../components/buttons";
 import MenuButton from "../components/buttons/MenuButton";
 import Logo from "../components/logo";
 
 export const Header = () => {
+  const handleClick = () => alert("Download beginning");
   return (
     <div className="bg-white dark:bg-slate-900 min-h-max">
       <nav className="flex items-center justify-between flex-wrap bg-white dark:bg-slate-900 p-6 max-w-screen-2xl mx-auto">
@@ -35,11 +37,14 @@ export const Header = () => {
             </label>
           </div>
           <div className="">
+            {/*
             <a href="#" 
               className="
                 inline-block text-sm px-4 py-2 leading-none border rounded text-black dark:text-white border-slate-900 dark:border-white  
                 hover:border-transparent hover:text-slate-900 hover:bg-white mt-4 lg:mt-0
             ">Download</a>
+            */}
+            <Button type="outline" onClick={handleClick}>Download</Button>
           </div>
         </div>
       </nav>
