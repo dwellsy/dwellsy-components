@@ -1,7 +1,7 @@
 import { FunctionComponent } from "react";
 import "../../App.css";
 
-type PrimaryButtonProps = {
+type OutlineButtonProps = {
   children?: React.ReactNode,
   size?: "sm" | "base" | "lg" | "xl" | null,
   error?: boolean,
@@ -10,7 +10,7 @@ type PrimaryButtonProps = {
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
 }
 
-export const PrimaryButton: FunctionComponent<PrimaryButtonProps> = ({
+export const OutlineButton: FunctionComponent<OutlineButtonProps> = ({
   children,
   size,
   error = false,
@@ -26,8 +26,8 @@ export const PrimaryButton: FunctionComponent<PrimaryButtonProps> = ({
 
   const actualSize = size === null ? "base" : size;
   baseClasses = `inline-flex px-10 py-3 text-${actualSize} font-semibold dark:text-white items-center`;
-  typeClasses = `text-${actualSize} text-white rounded-full bg-purple`;
-  hoverClasses = "hover:text-white hover:bg-purple-800";
+  typeClasses = "inline-block text-sm px-4 py-2 leading-none border rounded text-black dark:text-white border-slate-900 dark:border-white hover:border-black hover:text-slate-900 hover:bg-gray-200 mt-4 lg:mt-0 ";
+  hoverClasses = "hover:border hover:border-slate-500 hover:bg-slate-100";
 
   if(error) {
     errorClasses = "bg-red-600 active:bg-red-600";
@@ -36,9 +36,8 @@ export const PrimaryButton: FunctionComponent<PrimaryButtonProps> = ({
 
   if(disabled) {
     baseClasses = `px-10 py-3 text-${actualSize} font-semibold dark:text-slate-500 text-slate-400`;
-    typeClasses = `text-${actualSize} text-white rounded-full bg-purple border-purple bg-slate-100`;
-    // errorClasses = "";
-    // hoverClasses = "";
+    errorClasses = "";
+    hoverClasses = "";
   }
 
   return (
@@ -50,4 +49,4 @@ export const PrimaryButton: FunctionComponent<PrimaryButtonProps> = ({
   );
 }
 
-export default PrimaryButton;
+export default OutlineButton;
