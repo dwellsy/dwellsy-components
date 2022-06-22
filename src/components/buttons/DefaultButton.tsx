@@ -36,7 +36,7 @@ export const DefaultButton: FunctionComponent<DefaultButtonProps> = ({
   }
 
   if(disabled) {
-    baseClasses = `dark:text-slate-500 text-slate-400`;
+    baseClasses = `inline-flex px-10 py-3 text-${actualSize} font-semibold dark:text-slate-500 text-slate-400`;
     errorClasses = "";
     hoverClasses = "";
   }

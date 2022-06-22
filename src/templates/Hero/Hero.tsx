@@ -15,10 +15,11 @@ export const Hero = () => {
           </p>
           <div className="flex justify-center">
             <Button type="primary">Button</Button>
-            <Button>Button</Button>
+            <Button disabled={true} >Disabled</Button>
+            <Button error={true} >Error</Button>
           </div>
         </div>
       </div>
-</section>
+    </section>
   )
 }

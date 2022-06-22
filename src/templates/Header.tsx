@@ -9,8 +9,8 @@ export const Header = () => {
     <div className="bg-white dark:bg-slate-900 min-h-max">
       <nav className="flex items-center justify-between flex-wrap bg-white dark:bg-slate-900 p-6 max-w-screen-2xl mx-auto">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <Logo />
-          <span className="font-semibold text-md text-black dark:text-white tracking-tight">Tailwind CSS Demo</span>
+          <Logo className="mr-3" />
+          <span className="font-semibold text-md text-black dark:text-white tracking-tight">dwellsy-components</span>
         </div>
         <div className="block lg:hidden">
           <MenuButton />
@@ -36,13 +36,6 @@ export const Header = () => {
             </label>
           </div>
           <div className="">
-            {/*
-            <a href="#" 
-              className="
-                inline-block text-sm px-4 py-2 leading-none border rounded text-black dark:text-white border-slate-900 dark:border-white  
-                hover:border-transparent hover:text-slate-900 hover:bg-white mt-4 lg:mt-0
-            ">Download</a>
-            */}
             <Button type="outline" onClick={handleClick}>Download</Button>
           </div>
         </div>
