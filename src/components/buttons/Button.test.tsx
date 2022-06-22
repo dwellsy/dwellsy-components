@@ -1,6 +1,6 @@
 import {describe, expect, test, vi} from 'vitest';
 import {fireEvent, render, screen} from '@testing-library/react';
-import { Button } from './Button';
+import { Button } from './';
 
 describe("Button test", () => {
   test("should show title all the time", () => {

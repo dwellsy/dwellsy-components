@@ -1,7 +1,6 @@
 /* src/App.jsx */
 import "../App.css";
-import { Button } from "../components/buttons/index";
-import { MenuButton } from "../components/buttons/index";
+import { Button, MenuButton } from "../components/buttons";
 import Logo from "../components/logo";
 
 export const Header = () => {

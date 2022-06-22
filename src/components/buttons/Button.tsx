@@ -4,7 +4,7 @@ import {
   OutlineButton,
   PrimaryButton,
   SecondaryButton 
-} from './index'; 
+} from './'; 
 
 type ButtonProps = {
   children?: React.ReactNode,
