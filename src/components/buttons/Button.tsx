@@ -14,6 +14,7 @@ type ButtonProps = {
   loading?: boolean,
   disabled?: boolean,
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  className?: String,
 }
 
 export const Button: FunctionComponent<ButtonProps> = ({
@@ -24,16 +25,17 @@ export const Button: FunctionComponent<ButtonProps> = ({
   loading = false,
   disabled = false,
   onClick = () => {},
+  className = "",
 }) => {
   switch(type) {
     case "primary":
-      return <PrimaryButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick}>{ children }</PrimaryButton>
+      return <PrimaryButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick} className={className}>{ children }</PrimaryButton>
     case "secondary":
-      return <SecondaryButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick}>{ children }</SecondaryButton>
+      return <SecondaryButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick} className={className}>{ children }</SecondaryButton>
     case "outline":
-      return <OutlineButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick}>{ children }</OutlineButton>
+      return <OutlineButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick} className={className}>{ children }</OutlineButton>
     default:
-      return <DefaultButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick}>{ children }</DefaultButton>
+      return <DefaultButton size={size} error={error} loading={loading} disabled={disabled} onClick={onClick} className={className}>{ children }</DefaultButton>
   }
 }
 

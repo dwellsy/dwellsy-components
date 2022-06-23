@@ -8,6 +8,7 @@ type OutlineButtonProps = {
   loading?: boolean,
   disabled?: boolean,
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  className?: string,
 }
 
 export const OutlineButton: FunctionComponent<OutlineButtonProps> = ({
@@ -17,6 +18,7 @@ export const OutlineButton: FunctionComponent<OutlineButtonProps> = ({
   loading = false,
   disabled = false,
   onClick = () => {},
+  className = "",
 }) => {
   let typeClasses = "";
   let hoverClasses = "";
@@ -26,7 +28,7 @@ export const OutlineButton: FunctionComponent<OutlineButtonProps> = ({
 
   const actualSize = size === null ? "base" : size;
   baseClasses = `inline-flex px-10 py-3 text-${actualSize} font-semibold dark:text-white items-center`;
-  typeClasses = "inline-block text-sm px-4 py-2 leading-none border rounded text-black dark:text-white border-slate-900 dark:border-white hover:border-black hover:text-slate-900 hover:bg-gray-200 mt-4 lg:mt-0 ";
+  typeClasses = "inline-block text-sm px-4 py-2 border rounded text-black dark:text-white border-slate-900 dark:border-white hover:border-black hover:text-slate-900 hover:bg-gray-200 mt-4 lg:mt-0 ";
   hoverClasses = "hover:border hover:border-slate-500 hover:bg-slate-100";
 
   if(error) {
@@ -44,7 +46,7 @@ export const OutlineButton: FunctionComponent<OutlineButtonProps> = ({
     <button 
       onClick={disabled !== true ? onClick : () => {}}
       disabled={disabled}
-      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
+      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses} ${className}
     `}>{ !loading ? children : "- Loading -"}</button>
   );
 }

@@ -8,6 +8,7 @@ type SecondaryButtonProps = {
   loading?: boolean,
   disabled?: boolean,
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  className?: string,
 }
 
 export const SecondaryButton: FunctionComponent<SecondaryButtonProps> = ({
@@ -17,6 +18,7 @@ export const SecondaryButton: FunctionComponent<SecondaryButtonProps> = ({
   loading = false,
   disabled = false,
   onClick = () => {},
+  className = "",
 }) => {
   let typeClasses = "";
   let hoverClasses = "";
@@ -44,7 +46,7 @@ export const SecondaryButton: FunctionComponent<SecondaryButtonProps> = ({
     <button 
       onClick={disabled !== true ? onClick : () => {}}
       disabled={disabled}
-      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
+      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses} ${className}
     `}>{ !loading ? children : "- Loading -"}</button>
   );
 }

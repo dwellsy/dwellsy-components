@@ -8,6 +8,7 @@ type DefaultButtonProps = {
   loading?: boolean,
   disabled?: boolean,
   onClick?: React.MouseEventHandler<HTMLButtonElement>,
+  className?: string,
 }
 
 export const DefaultButton: FunctionComponent<DefaultButtonProps> = ({
@@ -17,6 +18,7 @@ export const DefaultButton: FunctionComponent<DefaultButtonProps> = ({
   loading = false,
   disabled = false,
   onClick = () => {},
+  className = "",
 }) => {
   let typeClasses = "";
   let hoverClasses = "";
@@ -45,7 +47,7 @@ export const DefaultButton: FunctionComponent<DefaultButtonProps> = ({
     <button 
       onClick={disabled !== true ? onClick : () => {}}
       disabled={disabled}
-      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses}
+      className={`${baseClasses} ${typeClasses} ${hoverClasses} ${errorClasses} ${disabledClasses} ${className}
     `}>{ !loading ? children : "- Loading -"}</button>
   );
 }
