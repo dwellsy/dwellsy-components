@@ -18,6 +18,7 @@ export const Header = () => {
         <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto hidden lg:block">
           <div className="text-sm lg:flex-grow">
             <label className="relative text-gray-400 focus-within:text-gray-600 w-full">
+              {/*
               <svg 
                 className="pointer-events-none w-8 h-8 absolute top-1/2 transform -translate-y-1/2 left-3 pl-3" 
                 viewBox="0 0 18 18" 
@@ -33,10 +34,51 @@ export const Header = () => {
                 placeholder="Enter a city, neighborhood, workplace, school, or even a coffee shop"
                 className="pl-9 mx-4 p-3 bg-white dark:bg-gray-300 border border-[#bdbae2] rounded-md black" 
               />
+              */}
+              <form>
+                <input type="search" name="search" placeholder="Search" 
+                  autoComplete="off"
+                  className="
+                    bg-white px-5 py-3 pl-8 text-gray-800 w-48 border-0 rounded-md 
+                    focus:outline-0 focus:w-full duration-500
+                  " />
+              </form>
             </label>
           </div>
           <div className="">
+            {/*
             <Button type="outline" onClick={handleClick}>Download</Button>
+            */}
+          <button id="dropdownDefault" 
+            data-dropdown-toggle="dropdown" 
+            className="
+              text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg 
+              text-sm px-4 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800
+            " 
+            type="button"
+          >
+            Dropdown button 
+            <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7">
+              </path>
+            </svg>
+          </button>
+          <div id="dropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700">
+              <ul className="py-1 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownDefault">
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
+                </li>
+                <li>
+                  <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
+                </li>
+              </ul>
+          </div>
           </div>
         </div>
       </nav>
